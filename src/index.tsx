@@ -1,10 +1,10 @@
 import React from 'react'
-import "./index.css"
+import EmailField from './components/emailFieldInput/index';
 
-const Index = () => {
+const EmailFieldInput = (props: any) => {
+
 	return (
-		<div className='ml-10'>index </div>
+		<EmailField {...props} />
 	)
 }
-
-export default Index
+export default EmailFieldInput;
