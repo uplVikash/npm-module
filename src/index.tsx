@@ -1,8 +1,9 @@
 import React from 'react'
+import "./index.css"
 
 const Index = () => {
 	return (
-		<div>index </div>
+		<div className='ml-10'>index </div>
 	)
 }
 
