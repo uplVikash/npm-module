@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { TextField, InputAdornment } from "@mui/material";
+import { TextField } from "@mui/material";
 import PropTypes from "prop-types";
 //  import { EmailStartIcon } from "../../common/svg_files";
 // import { EmailStartIcon } from "../../common/svg_files";
