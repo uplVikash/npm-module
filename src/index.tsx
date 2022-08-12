@@ -7,4 +7,4 @@ const EmailFieldInput = (props: any): JSX.Element => {
 		<EmailField {...props} />
 	)
 }
-export default EmailFieldInput;
+export { EmailFieldInput };
