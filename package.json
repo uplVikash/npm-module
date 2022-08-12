@@ -1,6 +1,6 @@
 {
-    "name": "formfilds",
-    "version": "1.0.1",
+    "name": "basicformfields",
+    "version": "1.0.2",
     "description": "",
     "main": "./lib/cjs/index.js",
     "module": "./lib/esm/index.js",

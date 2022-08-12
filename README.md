@@ -2,24 +2,21 @@
 
 #### Installation:-
 
-1. yarn add formfilds
-2. npm i formfilds
+1. yarn add formfields
+2. npm i formfields
 
 #### Import and example:-
 
 ```JavaScript
 import { TextField } from "textfields";
 
-const FunctionName = () => {
-  return (
+
     <TextField
     default={true}
     textLabel='textLabel'
     placeholder='placeholder'
     onChange={(e)= e.target.value}
     />
-    )
-}
 
 export default FunctionName
 ```
