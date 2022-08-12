@@ -2,13 +2,13 @@
 
 #### Installation:-
 
-1. yarn add basicformfields
-2. npm i basicformfields
+1. yarn add formfieldsui
+2. npm i formfieldsui
 
 #### Import and example:-
 
 ```JavaScript
-import { TextField } from "basicformfields";
+import { TextField } from "formfieldsui";
 
     <TextField
     default={true}
