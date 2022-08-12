@@ -1,23 +1,22 @@
-This is a basic text input field for React.js and Next.js --->
+## This is a basic text input field for React.js and Next.js --->
 
-Installation ->
+## Installation:->
 |
 |-> yarn --- yarn add textfields
 |
 |-> npm --- npm i textfields
 
-Dependencies:->
+## Dependencies:->
 typescript version ^4.7.4
 react version ^18.2.0
 react-dom version ^18.2.0
 
-Import:->
+## Import:->
+import { TextField } from "textfields";
 
-## import { TextField } from "textfields";
+<TextField />
 
-## <TextField />
-
-Props:->
+## Props:->
 label,
 id,
 value,
@@ -28,19 +27,6 @@ placeholder,
 onChange,
 disabled...
 
-ClssName for Css:->
+## ClssName for Css:->
 labelClass = for label,
 rootClass = for input fields
-
-Example:->
-
-import { TextField } from "textfields";
-const FunctionName = () => {
-return (
-<>
-<TextField lable='lable' lableClass={`text-[red]`} type='text' placeholder='placeholder' />
-</>
-)
-}
-
-export default FunctionName;
