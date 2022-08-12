@@ -6,12 +6,12 @@
 import React from "react";
 import { TextField } from "@mui/material";
 import PropTypes from "prop-types";
-//  import { EmailStartIcon } from "../../common/svg_files";
 // import { EmailStartIcon } from "../../common/svg_files";
-//  import styles from "./Index.module.css";
+// import { EmailStartIcon } from "../../common/svg_files";
+// import styles from "./Index.module.css";
 
 const EmailField = (props: any) => {
-    //    const emailStartSvg = React.useState(EmailStartIcon);
+    //   const emailStartSvg = React.useState(EmailStartIcon);
 
     /**
      * clickEnter for enter button
@@ -32,7 +32,6 @@ const EmailField = (props: any) => {
         <div className={`textfieldinput flex flex-col ${props.extracls}`}>
             <label className={`${props.lableCls}`}>{props.label}</label>
             <TextField
-                {...props}
                 autoFocus={props.autoFocus}
                 onChange={onChange}
                 disabled={props.disabled}
@@ -40,9 +39,9 @@ const EmailField = (props: any) => {
                 variant="outlined"
                 label={props.inputLabel}
                 defaultValue={props.defaultValue}
-                //  className={`${styles.textfieldclass} ${
-                //    props.textnewclass ? props.textnewclass : ""
-                //  }`}
+                // className={`${styles.textfieldclass} ${
+                //   props.textnewclass ? props.textnewclass : ""
+                // }`}
                 type={"email"}
                 autoComplete="off"
                 name={props.textinputname}

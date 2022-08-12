@@ -1,3 +1,3 @@
 /// <reference types="react" />
-declare const Index: () => JSX.Element;
-export default Index;
+declare const EmailFieldInput: (props: any) => JSX.Element;
+export default EmailFieldInput;
