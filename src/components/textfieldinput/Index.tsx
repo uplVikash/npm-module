@@ -6,7 +6,7 @@ const TextFieldInput = (props: any) => {
     <>
       {props.default &&
         <>
-          <p className={props.labelClass}>{props.textLabel}</p>
+          <p className={props.textlabelClass}>{props.textLabel}</p>
           <input
             id={props.id}
             value={props.value}
