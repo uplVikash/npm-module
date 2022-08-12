@@ -2,8 +2,8 @@
 
 #### Installation:-
 
-1. yarn add formfields
-2. npm i formfields
+1. yarn add basicformfields
+2. npm i basicformfields
 
 #### Import and example:-
 
