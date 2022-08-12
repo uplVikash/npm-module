@@ -1,5 +1,5 @@
 {
-    "name": "textfields",
+    "name": "form-filds",
     "version": "1.0.3",
     "description": "",
     "main": "./lib/cjs/index.js",
