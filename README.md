@@ -6,6 +6,11 @@ Installation ->
 |
 |-> npm --- npm i textfields
 
+Dependencies:->
+typescript version ^4.7.4
+react version ^18.2.0
+react-dom version ^18.2.0
+
 Import:->
 
 ## import { TextField } from "textfields";
@@ -30,12 +35,12 @@ rootClass = for input fields
 Example:->
 
 import { TextField } from "textfields";
-    const FunctionName = () => {
-        return (
-            <>
-                <TextField lable='lable' lableClass={`text-[red]`} type='text' placeholder='placeholder' />
-            </>
-    )
+const FunctionName = () => {
+return (
+<>
+<TextField lable='lable' lableClass={`text-[red]`} type='text' placeholder='placeholder' />
+</>
+)
 }
 
 export default FunctionName;
