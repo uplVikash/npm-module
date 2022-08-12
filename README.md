@@ -1,32 +1,47 @@
-## This is a basic text input field for React.js and Next.js --->
+#### This is a basic text input field for React.js and Next.js ---
 
-## Installation:->
-|
-|-> yarn --- yarn add textfields
-|
-|-> npm --- npm i textfields
+#### Installation:-
 
-## Dependencies:->
-typescript version ^4.7.4
-react version ^18.2.0
-react-dom version ^18.2.0
+> yarn add textfields
+> npm i textfields
 
-## Import:->
+#### Import and example:-
+
+```JavaScript
 import { TextField } from "textfields";
 
-<TextField />
+const FunctionName = () => {
+  return (
+    <TextField
+    default={true}
+    textLabel='textLabel'
+    placeholder='placeholder'
+    onChange={(e)= e.target.value}
+    />
+    )
+}
 
-## Props:->
-label,
+export default FunctionName
+```
+
+#### Props:-
+
+textLabel,
 id,
 value,
 name,
-className,
-type,
 placeholder,
 onChange,
 disabled...
 
-## ClssName for Css:->
-labelClass = for label,
+#### ClssName for Css:-
+
+textlabelClass = for label,
 rootClass = for input fields
+
+#### variant :-
+default, underLine
+
+```JavaScript
+<TextField underLine /> //underLine is a variant
+```
