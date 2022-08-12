@@ -8,8 +8,7 @@
 #### Import and example:-
 
 ```JavaScript
-import { TextField } from "textfields";
-
+import { TextField } from "basicformfields";
 
     <TextField
     default={true}
@@ -18,7 +17,6 @@ import { TextField } from "textfields";
     onChange={(e)= e.target.value}
     />
 
-export default FunctionName
 ```
 
 #### Props:-
