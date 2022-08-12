@@ -3,7 +3,7 @@ import React from 'react'
 const TextFieldInput = (props: any) => {
   return (
     <>
-    <p className={props.lableClass}>{props.lable}</p>
+    <p className={props.labelClass}>{props.label}</p>
     <input 
     id={props.id}
     value={props.value}
