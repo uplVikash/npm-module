@@ -1,6 +1,5 @@
 {
     "name": "@sukanta/formfields",
-    "private": "false",
     "version": "1.0.0",
     "description": "",
     "main": "./lib/cjs/index.js",
