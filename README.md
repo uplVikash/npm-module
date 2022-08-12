@@ -2,8 +2,8 @@
 
 #### Installation:-
 
-1. yarn add textfields
-2. npm i textfields
+1. yarn add formfilds
+2. npm i formfilds
 
 #### Import and example:-
 
