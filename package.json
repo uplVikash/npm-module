@@ -1,6 +1,6 @@
 {
-    "name": "form-filds",
-    "version": "1.0.3",
+    "name": "formfilds",
+    "version": "1.0.0",
     "description": "",
     "main": "./lib/cjs/index.js",
     "module": "./lib/esm/index.js",
