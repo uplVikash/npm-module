@@ -2,8 +2,11 @@
 
 #### Installation:-
 
-1. yarn add formfieldsui
-2. npm i formfieldsui
+```
+yarn add formfieldsui
+npm i formfieldsui
+
+```
 
 #### Import and example:-
 
@@ -11,7 +14,7 @@
 import { TextField } from "formfieldsui";
 
     <TextField
-    default={true}
+    outlined={true}
     textLabel='textLabel'
     placeholder='placeholder'
     onChange={(e)= e.target.value}
@@ -22,6 +25,7 @@ import { TextField } from "formfieldsui";
 #### Props:-
 
 textLabel,
+notification,
 id,
 value,
 name,
@@ -32,11 +36,13 @@ disabled...
 #### ClssName for Css:-
 
 textlabelClass = for label,
-rootClass = for input fields
+rootClass = for input fields,
+notificationClass = for notification "error message"
 
 #### variant :-
-default, underLine
+
+outlined, standard, filled
 
 ```JavaScript
-<TextField underLine /> //underLine is a variant
+<TextField standard /> //standard is a variant
 ```
