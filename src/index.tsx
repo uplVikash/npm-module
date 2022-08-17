@@ -1,5 +1,6 @@
 import React from 'react'
-import EmailField from './components/emailFieldInput/index';
+import EmailField from './components/emailFieldInput/Index';
+import TextFieldInput from './components/textfieldinput/Index'
 
 const EmailFieldInput = (props: any): JSX.Element => {
 
@@ -7,4 +8,13 @@ const EmailFieldInput = (props: any): JSX.Element => {
 		<EmailField {...props} />
 	)
 }
-export { EmailFieldInput };
+
+const TextField = (props: any) => {
+	return (
+		<>
+		<TextFieldInput {...props} />
+		</>
+	)
+}
+
+export { TextField, EmailFieldInput }

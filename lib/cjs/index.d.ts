@@ -1,3 +1,4 @@
 /// <reference types="react" />
 declare const EmailFieldInput: (props: any) => JSX.Element;
-export { EmailFieldInput };
+declare const TextField: (props: any) => JSX.Element;
+export { TextField, EmailFieldInput };
