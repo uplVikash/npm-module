@@ -1,4 +1,5 @@
 import React from 'react'
+import PasswordFieldInput from './components/passwordfieldinput'
 import TextFieldInput from './components/textfieldinput/Index'
 
 const TextField = (props: any) => {
@@ -8,5 +9,12 @@ const TextField = (props: any) => {
 		</>
 	)
 }
+const PasswordField = (props: any) => {
+	return (
+		<>
+		<PasswordFieldInput {...props} />
+		</>
+	)
+}
 
-export { TextField }
+export { TextField , PasswordField}
