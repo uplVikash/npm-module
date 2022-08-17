@@ -5,13 +5,15 @@ const TextFieldInput = (props: any) => {
   const outlinedTheme = {
     minHeight: '50px',
     minWidth: '200px',
+    border: props.error ? '1px solid #ff0505' : '1px solid #000000',
+    outline: 'none'
   }
 
   const standardTheme = {
     minHeight: '50px',
     minWidth: '200px',
     boxSizing: 'border-box',
-    borderBottom: '1px solid #000000',
+    borderBottom: props.error ? '1px solid #ff0505' : '1px solid #000000',
     borderTop: 'none',
     borderLeft: 'none',
     borderRight: 'none',
@@ -25,7 +27,7 @@ const TextFieldInput = (props: any) => {
     minHeight: '50px',
     minWidth: '200px',
     boxSizing: 'border-box',
-    borderBottom: '1px solid #000000',
+    borderBottom: props.error ? '1px solid #ff0505' : '1px solid #000000',
     borderTop: 'none',
     borderLeft: 'none',
     borderRight: 'none',
@@ -48,13 +50,13 @@ const TextFieldInput = (props: any) => {
         value={props.value}
         name={props.name}
         className={props.rootClass}
-        type='text'
+        type={props.type ?? 'text'}
         placeholder={props.placeholder}
         onChange={props.onChange}
         disabled={props.disabled}
         {...props}
       />
-      <p className={props.notificationClass} style={{ color: 'red' }}>{props.notification}</p>
+      <p className={props.helperTextClass} style={{ color: 'red' }}>{props.helperText}</p>
     </>
   )
 }
