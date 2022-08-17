@@ -1,10 +1,12 @@
 import React from 'react'
-import "./index.css"
+import TextFieldInput from './components/textfieldinput/Index'
 
-const Index = () => {
+const TextField = (props: any) => {
 	return (
-		<div className='ml-10'>index </div>
+		<>
+		<TextFieldInput {...props} />
+		</>
 	)
 }
 
-export default Index
+export { TextField }
