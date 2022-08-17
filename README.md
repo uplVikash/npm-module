@@ -1,48 +1,93 @@
-#### This is a basic text input field for React.js and Next.js ---
 
-#### Installation:-
+####  This is a basic text input field for React.js and Next.js ---
+
+  
+
+####  Installation:-
+
+  
+
+#####  Using npm :-
+
+  
 
 ```
-yarn add formfieldsui
-npm i formfieldsui
-
+$ npm install --save formfieldsui
+```
+#####  Using yarn :-
+```
+$ yarn add formfieldsui
 ```
 
-#### Import and example:-
+  
+
+####  Import and example:-
+
+  
 
 ```JavaScript
+
 import { TextField } from "formfieldsui";
 
-    <TextField
-    outlined={true}
-    textLabel='textLabel'
-    placeholder='placeholder'
-    onChange={(e)= e.target.value}
-    />
+
+<TextField
+
+textLabel='textLabel'
+
+placeholder='placeholder'
+
+onChange={(e)=  e.target.value}
+
+/>
 
 ```
 
-#### Props:-
+  
 
-textLabel,
+####  Props:-
+
+  
+
+Label,
+
 notification,
+
 id,
+
 value,
+
 name,
+
 placeholder,
+
 onChange,
+
 disabled...
 
-#### ClssName for Css:-
+  
+
+####  ClssName for Css:-
+
+  
 
 textlabelClass = for label,
+
 rootClass = for input fields,
+
 notificationClass = for notification "error message"
 
-#### variant :-
+  
 
-outlined, standard, filled
+####  variant :-
+
+  
+
+outlined {Defult}, standard, filled
+
+  
 
 ```JavaScript
-<TextField standard /> //standard is a variant
+
+<TextField  variant='filled' />
+
 ```
