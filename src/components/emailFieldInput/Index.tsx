@@ -36,7 +36,7 @@ const EmailField = (props: any) => {
                 value={props.value}
                 name={props.name}
                 className={props.rootClass}
-                type='email'
+                type={props.type}
                 placeholder={props.placeholder}
                 onChange={props.onChange}
                 disabled={props.disabled}
