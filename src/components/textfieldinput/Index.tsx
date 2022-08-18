@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TextFieldInput = (props: any) => {
+const TextField = (props: any) => {
 
   const outlinedTheme = {
     minHeight: '50px',
@@ -61,4 +61,4 @@ const TextFieldInput = (props: any) => {
   )
 }
 
-export default TextFieldInput
+export default TextField
