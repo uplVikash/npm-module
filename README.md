@@ -26,14 +26,13 @@ placeholder='placeholder'
 onChange={(e)=  e.target.value}
 />
 ```
-##### :boom: Input type for TextFieldInput  :- Default type is `text` and it's customizable by props `type`.
-
 
 ####  Props:-
 | Name  | Type | Default | Description
 | ------------- | ------------- | ------------- | ------------- |
+| type | string | text-TextFieldInput, email-EmailFieldInput |It's customizable and it's only applicable for TextFieldInput|
 | Label  | string  |  | The label content.  |
-| helperText  | string  |   |   The helper text content.  |
+| helperText  | string  |   |   The helper text content for message's.  |
 | error  | bool  | false  | If `true`, the label is displayed in an error state.  |
 | id  | string  |   | The id of the `input` element. Use this prop to make `label` and `helperText` accessible for screen readers.  |
 | value  | any  |   | The value of the  `input`  element, required for a controlled component.  |
@@ -55,5 +54,6 @@ notificationClass = for notification "error message"
 
 ```JavaScript
 Ex:-
-<TextField  variant='filled' />
+<TextFieldInput  variant='filled' />
+<EmailFieldInput  variant='filled' />
 ```
