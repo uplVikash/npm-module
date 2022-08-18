@@ -57,7 +57,7 @@ const EmailField = (props: any) => {
                     value={props.value}
                     name={props.name}
                     className={props.rootClass}
-                    type={props.type ?? 'email'}
+                    type={'email'}
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     placeholder={props.placeholder}
                     onChange={props.onChange}
@@ -65,10 +65,7 @@ const EmailField = (props: any) => {
                     {...props}
                 />
             </form>
-            {/* <form>
-                <input
-                    id={props.id} type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-            </form> */}
+            <p className={props.helperTextClass} style={{ color: 'red' }}>{props.helperText}</p>
         </div>
     );
 };
