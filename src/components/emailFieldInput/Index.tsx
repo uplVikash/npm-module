@@ -4,7 +4,6 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 //import { EmailStartIcon } from "../emailFieldInput/image/svg_files";
 const EmailField = (props: any) => {
     // const emailStartSvg = useState(EmailStartIcon);
@@ -72,25 +71,6 @@ const EmailField = (props: any) => {
             </form> */}
         </div>
     );
-};
-
-EmailField.prototype = {
-    inputLabel: PropTypes.string,
-    textnewclass: PropTypes.string,
-    textinputname: PropTypes.string,
-    disabled: PropTypes.bool,
-    defaultValue: PropTypes.string,
-    error: PropTypes.bool,
-    fullwidthState: PropTypes.bool,
-    placeholder: PropTypes.string,
-    onChange: PropTypes.func,
-    inputProps: PropTypes.object,
-    required: PropTypes.bool,
-    value: PropTypes.string,
-    clickEnter: PropTypes.func,
-    helperText: PropTypes.string,
-    dataCy: PropTypes.string,
-    tabIndex: PropTypes.number,
 };
 
 export default EmailField;
