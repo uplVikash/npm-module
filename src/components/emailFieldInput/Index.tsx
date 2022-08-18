@@ -4,10 +4,8 @@
  */
 
 import React from "react";
-// import { TextField } from "@mui/material";
 import PropTypes from "prop-types";
 // import { EmailStartIcon } from "../emailFieldInput/image/svg_files";
-// import styles from "./Index.module.css";
 
 const EmailField = (props: any) => {
     // const emailStartSvg = useState(EmailStartIcon);
@@ -48,22 +46,6 @@ const EmailField = (props: any) => {
         borderTopLeftRadius: '4px',
         borderTopRightRadius: '4px'
     }
-
-
-    /**
-     * clickEnter for enter button
-     * @param e
-     */
-    // const clickEnter = (e: any) => {
-    //     if (e.key === "Enter") {
-    //         // Do code here
-    //         props.clickEnter();
-    //     }
-    // };
-
-    // const onChange = (event: any) => {
-    //     props.onChange(event);
-    // };
 
     return (
         <div>
