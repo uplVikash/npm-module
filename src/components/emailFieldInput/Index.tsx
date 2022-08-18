@@ -4,9 +4,7 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
-// import { EmailStartIcon } from "../emailFieldInput/image/svg_files";
-
+//import { EmailStartIcon } from "../emailFieldInput/image/svg_files";
 const EmailField = (props: any) => {
     // const emailStartSvg = useState(EmailStartIcon);
 
@@ -50,45 +48,29 @@ const EmailField = (props: any) => {
     return (
         <div>
             <label className={`${props.lableCls}`}>{props.label}</label>
-
-            <input
-                style={props.variant === 'standard' ? standardTheme
-                    : props.variant === 'filled' ? filledTheme
-                        : outlinedTheme}
-                id={props.id}
-                value={props.value}
-                name={props.name}
-                className={props.rootClass}
-                type={props.type ?? 'email'}
-                placeholder={props.placeholder}
-                onChange={props.onChange}
-                disabled={props.disabled}
-                {...props}
-
-            />
-            <p className={props.helperTextClass} style={{ color: 'red' }}>{props.helperText}</p>
-
+            <form>
+                <input
+                    style={props.variant === 'standard' ? standardTheme
+                        : props.variant === 'filled' ? filledTheme
+                            : outlinedTheme}
+                    id={props.id}
+                    value={props.value}
+                    name={props.name}
+                    className={props.rootClass}
+                    type={props.type ?? 'email'}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    placeholder={props.placeholder}
+                    onChange={props.onChange}
+                    disabled={props.disabled}
+                    {...props}
+                />
+            </form>
+            {/* <form>
+                <input
+                    id={props.id} type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            </form> */}
         </div>
     );
-};
-
-EmailField.prototype = {
-    inputLabel: PropTypes.string,
-    textnewclass: PropTypes.string,
-    textinputname: PropTypes.string,
-    disabled: PropTypes.bool,
-    defaultValue: PropTypes.string,
-    error: PropTypes.bool,
-    fullwidthState: PropTypes.bool,
-    placeholder: PropTypes.string,
-    onChange: PropTypes.func,
-    inputProps: PropTypes.object,
-    required: PropTypes.bool,
-    value: PropTypes.string,
-    clickEnter: PropTypes.func,
-    helperText: PropTypes.string,
-    dataCy: PropTypes.string,
-    tabIndex: PropTypes.number,
 };
 
 export default EmailField;
