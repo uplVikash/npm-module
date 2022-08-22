@@ -38,11 +38,12 @@ const PhoneNoField = (props: any) => {
         borderTopLeftRadius: '4px',
         borderTopRightRadius: '4px'
     }
-
+   
     return (
         <>
             <p className={props.textlabelClass}>{props.Label}</p>
-          {props.country === 'USA' ? <input
+            <div onClick={() => props.setUsa(true)}>USA</div>
+            {props.usa === true ? <input
                 style={props.variant === 'standard' ? standardTheme
                     : props.variant === 'filled' ? filledTheme
                         : outlinedTheme}
@@ -55,9 +56,9 @@ const PhoneNoField = (props: any) => {
                 onChange={props.onChange}
                 disabled={props.disabled}
                 {...props}
-            />
-            :
-            <input
+            /> : null}
+            <div onClick={() => props.setInd(true)}>IND</div>
+            {props.ind === true ? <input
                 style={props.variant === 'standard' ? standardTheme
                     : props.variant === 'filled' ? filledTheme
                         : outlinedTheme}
@@ -70,7 +71,7 @@ const PhoneNoField = (props: any) => {
                 onChange={props.onChange}
                 disabled={props.disabled}
                 {...props}
-            />}
+            /> : null}
             <p className={props.helperTextClass} style={{ color: 'red' }}>{props.helperText}</p>
         </>
     )
