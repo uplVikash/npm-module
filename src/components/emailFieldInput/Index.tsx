@@ -47,7 +47,7 @@ const EmailField = (props: any) => {
 
     return (
         <div>
-            <label className={`${props.lableCls}`}>{props.label}</label>
+            <label className={`${props.lableClass}`}>{props.label}</label>
             <form>
                 <input
                     style={props.variant === 'standard' ? standardTheme

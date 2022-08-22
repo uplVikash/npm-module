@@ -15,7 +15,7 @@ const TextAreaField = (props: any) => {
 
     return (
         <div>
-            <label className={`${props.textArealabelClass}`}>{props.label}</label>
+            <label className={`${props.lableClass}`}>{props.label}</label>
                 <textarea
                     style={TextAreaTheme}
                     id={props.id}

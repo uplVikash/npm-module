@@ -41,7 +41,7 @@ const TextField = (props: any) => {
 
   return (
     <>
-      <p className={props.textlabelClass}>{props.label}</p>
+      <p className={props.lableClass}>{props.label}</p>
       <input
         style={props.variant === 'standard' ? standardTheme
           : props.variant === 'filled' ? filledTheme

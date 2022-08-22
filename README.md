@@ -12,18 +12,24 @@ $ yarn add formfieldsui
 ####  Import and example:-
 
 ```JavaScript
-import { EmailFieldInput, TextFieldInput } from "formfieldsui";
+import { EmailFieldInput, TextFieldInput, TextAreaFieldInput } from "formfieldsui";
 
 <EmailFieldInput
 label='EmailLabel'
 placeholder='placeholder'
-onChange={(e)=  e.target.value}
+onChange={(e) =>  e.target.value}
 />
 
 <TextFieldInput
 label='textLabel'
 placeholder='placeholder'
-onChange={(e)=  e.target.value}
+onChange={(e) =>  e.target.value}
+/>
+
+<TextAreaFieldInput 
+label='textAreaLabel'
+placeholder='placeholder'
+onChange={(e) =>  e.target.value}
 />
 ```
 
@@ -39,18 +45,22 @@ onChange={(e)=  e.target.value}
 | name  | string  |   |   Name attribute of the  `input`  element.  |
 | placeholder  | string  |   | The placeholder content.  |
 | onChange  | func  |   | onChange={(e)=  e.target.value}  |
+|rows| number | |The rows attribute specifies the visible height of a text area, in lines. (it's only aplicable for TextAreaFieldInput)|
+|cols|number||The cols attribute specifies the visible width of a text area. (it's only aplicable for TextAreaFieldInput)|
 | disabled  | bool  | false  |If `true`, the input field is disabled  |
 
 ####  ClassName for Css:-
-textlabelClass = for label,
+```
+lableClass = for label,
 rootClass = for input fields,
-notificationClass = for notification "error message"
+helperTextClass = for notification "error message"
+```
 ####  variant :-
 | | Name  | |
 |---| ------------- | --|
-| | outlined `(Default)` |
-| | standard |
-| | filled  |
+| | outlined `(Default)` ||
+| | standard ||
+| | filled  ||
 
 ```JavaScript
 Ex:-
