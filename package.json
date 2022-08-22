@@ -15,7 +15,7 @@
         "url": "git+https://github.com/uplSukantaM/npm-module.git"
     },
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/uplSukantaM/npm-module/issues"
     },
