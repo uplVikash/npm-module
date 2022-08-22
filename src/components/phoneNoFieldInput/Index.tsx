@@ -38,25 +38,37 @@ const PhoneNoField = (props: any) => {
         borderTopLeftRadius: '4px',
         borderTopRightRadius: '4px'
     }
-   
+
     return (
         <>
             <p className={props.textlabelClass}>{props.Label}</p>
             <div onClick={() => props.setUsa(true)}>USA</div>
-            {props.usa === true ? <input
-                style={props.variant === 'standard' ? standardTheme
-                    : props.variant === 'filled' ? filledTheme
-                        : outlinedTheme}
-                id={props.id}
-                value={props.value}
-                name={props.name}
-                className={props.rootClass}
-                type={'text'}
-                placeholder={props.placeholder}
-                onChange={props.onChange}
-                disabled={props.disabled}
-                {...props}
-            /> : null}
+            {props.usa === true ?
+
+                // <input
+                //     style={props.variant === 'standard' ? standardTheme
+                //         : props.variant === 'filled' ? filledTheme
+                //             : outlinedTheme}
+                //     id={props.id}
+                //     value={props.value}
+                //     name={props.name}
+                //     inputmode="numeric"
+                //     className={props.rootClass}
+                //     type={'text'}
+                //     pattern="[0-9]*"
+                //     placeholder={props.placeholder}
+                //     onChange={props.onChange}
+                //     disabled={props.disabled}
+                //     {...props}
+                // /> 
+
+                <label onChange={props.onChange}>
+                    (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size={2} />) -
+                    <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size={2} /> -
+                    <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size={3} />
+                </label>
+
+                : null}
             <div onClick={() => props.setInd(true)}>IND</div>
             {props.ind === true ? <input
                 style={props.variant === 'standard' ? standardTheme
@@ -67,6 +79,7 @@ const PhoneNoField = (props: any) => {
                 name={props.name}
                 className={props.rootClass}
                 type={'number'}
+                pattern="[0-9]*"
                 placeholder={props.placeholder}
                 onChange={props.onChange}
                 disabled={props.disabled}
