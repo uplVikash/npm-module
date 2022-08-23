@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import passwordshoweye from "./Image/passwordshoweye.svg"
 // import passwordhideeye from "./Image/passwordhideeye.svg"
 const PasswordField = (props : any) => {
-    const [showPassword, setShowPassword] : any = useState(false);
 
     const outlinedTheme = {
         minHeight: '50px',
@@ -43,7 +42,7 @@ const PasswordField = (props : any) => {
   return (
     <>
     <p className={props.textlabelClass}>{props.Label}</p>
-    <div style={{display:"flex"}}>
+    <div style={{position: 'relative'}}>
     <input
       style={props.variant === 'standard' ? standardTheme
         : props.variant === 'filled' ? filledTheme
@@ -52,17 +51,17 @@ const PasswordField = (props : any) => {
       value={props.value}
       name={props.name}
       className={props.rootClass}
-      type= {showPassword ? "text" : "password"}
+      type= {props.showpassword ? "text" : "password"}
       placeholder={props.placeholder}
       onChange={props.onChange}
       disabled={props.disabled}
       {...props}
     />
-    <div onClick={() => setShowPassword(!showPassword)}>
-    {!showPassword ? (
-                    <img src="./Image/passwordshoweye.svg" alt="visiblepassword"/>
+    <div >
+    {!props.showpassword ? (
+                    <img onClick={()=>props.onClick()} src={props.showimg} alt="show" style={{position: 'absolute', cursor:"pointer",top: '15px',left:'140px'}}/>
                   ) : (
-                    <img src="./Image/passwordhideeye.svg" alt="unvisiblepassword"/>
+                    <img onClick={()=>props.onClick()} src={props.hideimg} alt="hide" style={{position: 'absolute', cursor:"pointer",top: '15px',left:'140px'}}/>
                   )}
     </div>
     </div>
