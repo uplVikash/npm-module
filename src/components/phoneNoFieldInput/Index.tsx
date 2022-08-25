@@ -1,6 +1,8 @@
 import React from 'react'
 
 const PhoneNoField = (props: any) => {
+    let updatedValue:any=''
+    let newOutput:any
 
     const outlinedTheme = {
         minHeight: '50px',
@@ -38,11 +40,43 @@ const PhoneNoField = (props: any) => {
         borderTopLeftRadius: '4px',
         borderTopRightRadius: '4px'
     }
+    const formatPhoneNumber = (value: any)=> {
+        // if input value is falsy eg if the user deletes the input, then just return
+        if (!value) return value;
+      
+        // clean the input for any non-digit values.
+        const phoneNumber = value.replace(/[^\d]/g, "");
+      
+        // phoneNumberLength is used to know when to apply our formatting for the phone number
+        const phoneNumberLength = phoneNumber.length;
+      
+        // we need to return the value with no formatting if its less then four digits
+        // this is to avoid weird behavior that occurs if you  format the area code to early
+        if (phoneNumberLength < 4) return phoneNumber;
+      
+        // if phoneNumberLength is greater than 4 and less the 7 we start to return
+        // the formatted number
+        if (phoneNumberLength < 7) {
+          return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+        }
+      
+        // finally, if the phoneNumberLength is greater then seven, we add the last
+        // bit of formatting and return it.
+        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+          3,
+          6
+        )}-${phoneNumber.slice(6, 10)}`;
+      }
+    const onChange = (e: any) => {
+        updatedValue=updatedValue+(e.target.value).toString();
+        newOutput=formatPhoneNumber((updatedValue))
+        console.log("i'm in module",newOutput)
+    }
 
     return (
         <>
             <p className={props.textlabelClass}>{props.Label}</p>
-            <div onClick={() => props.setUsa(true)}>USA</div>
+            {/* <div onClick={() => props.setUsa(true)}>USA</div>
             {props.usa === true ?
 
                 // <input
@@ -84,7 +118,23 @@ const PhoneNoField = (props: any) => {
                 onChange={props.onChange}
                 disabled={props.disabled}
                 {...props}
-            /> : null}
+            /> : null} */}
+            <input
+                style={props.variant === 'standard' ? standardTheme
+                    : props.variant === 'filled' ? filledTheme
+                        : outlinedTheme}
+                id={props.id}
+                // value={props.value}
+                value={newOutput}
+                name={props.name}
+                className={props.rootClass}
+                // type='tel'
+                // pattern="[0-9]*"
+                placeholder={props.placeholder}
+                onChange={(e:any)=>onChange(e)}
+                disabled={props.disabled}
+                {...props}
+            />
             <p className={props.helperTextClass} style={{ color: 'red' }}>{props.helperText}</p>
         </>
     )
